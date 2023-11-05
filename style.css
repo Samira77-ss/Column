@@ -54,6 +54,12 @@ button:hover {
   background-color: transparent;
   color: var(--fourthColor);
 }
+footer {
+  font-family: var(--secondaryFont);
+  text-align: center;
+  margin-top: 20px;
+  font-size: 12px;
+}
 .firstButton {
   color: var(--firstColor);
 }
