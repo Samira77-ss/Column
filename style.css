@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --firstColor: hsl(31, 77%, 52%);
+  --secondColor: hsl(184, 100%, 22%);
+  --thirdColor: hsl(179, 100%, 13%);
+  --fourthColor: hsl(0, 0%, 95%);
+  --primaryFont: "Big Shoulders Display", cursive;
+  --secondaryFont: "Lexend Deca", sans-serif;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 1rem 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+img {
+  width: 50px;
+  height: auto;
+}
+h2 {
+  font-family: var(--primaryFont);
+  font-size: 3rem;
+  font-weight: bold;
+}
+p {
+  font-family: var(--secondaryFont);
+  font-size: 12px;
+  color: hsla(0, 0%, 100%, 0.75);
+  line-height: 1.6;
+  letter-spacing: 0.5px;
+}
+button {
+  background-color: var(--fourthColor);
+  border: 2px solid var(--fourthColor);
+  margin-bottom: 10px;
+  padding: 8px 18px;
+  border-radius: 30px;
+  font-size: 13px;
+  cursor: pointer;
+  font-family: var(--secondaryFont);
+  letter-spacing: 0.5px;
+  transition: all 0.3s;
+}
+
+button:hover {
+  background-color: transparent;
+  color: var(--fourthColor);
+}
+.firstButton {
+  color: var(--firstColor);
+}
+.secondButton {
+  color: var(--secondColor);
+}
+.thirdButton {
+  color: var(--thirdColor);
+}
+.sedans,
+.suvs,
+.luxury {
+  color: #fff;
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 8rem;
+  align-items: flex-start;
+}
+.sedans {
+  background-color: var(--firstColor);
+}
+.suvs {
+  background-color: var(--secondColor);
+}
+.luxury {
+  background-color: var(--thirdColor);
+}
+.sedans {
+  border-radius: 7px 0 0 7px;
+}
+.luxury {
+  border-radius: 0 7px 7px 0;
+}
+.row {
+  width: clamp(100px, 90%, 75rem);
+  margin: 0 auto;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+}
+
+@media screen and (max-width: 650px) {
+  .sedans,
+  .suvs,
+  .luxury {
+    row-gap: 1.5rem;
+  }
+  .col-4 {
+    width: 100%;
+  }
+  .sedans {
+    border-radius: 7px 7px 0 0;
+  }
+  .luxury {
+    border-radius: 0 0 7px 7px;
+  }
+}
